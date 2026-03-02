@@ -1,0 +1,312 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #0a0a10; /* hitam */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f5f5f5;
+    padding: 40px 20px;
+}
+
+/* ================= KOTAK BESAR (SEMUA BAGIAN) ================= */
+body > h1,
+body > h2,
+body > p,
+body > ul,
+.daftar-produk,
+.artikel,
+.formulir {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 50px;
+    background: #111118; /* hitam gelap */
+    border: 2px solid #d4af37; /* gold */
+    border-radius: 20px;
+}
+
+/* ================= JUDUL ================= */
+h1, h2, h3 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ================= PARAGRAF ================= */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ================= PRODUK ================= */
+.daftar-produk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 30px;
+}
+
+.produk {
+    background: #161622;
+    border: 1px solid #d4af37;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+}
+
+.produk img {
+    width: 140px;
+    margin-bottom: 15px;
+}
+
+.produk h2,
+.produk h3 {
+    color: #d4af37;
+}
+
+.harga {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.deskripsi {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* ================= ARTIKEL ================= */
+.artikel {
+    line-height: 1.9;
+}
+
+.artikel .penulis {
+    color: #aaa;
+}
+
+.artikel .sampul {
+    width: 180px;
+    float: right;
+    margin: 0 0 20px 20px;
+    border: 1px solid #d4af37;
+}
+
+.artikel blockquote {
+    border-left: 4px solid #d4af37;
+    padding-left: 20px;
+    margin: 20px 0;
+    background: #161622;
+    color: #ddd;
+}
+
+/* ================= BUTTON ================= */
+.btn-kembali {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 12px 20px;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-kembali:hover {
+    background: #d4af37;
+    color: #0a0a10;
+}
+
+/* ================= FORM ================= */
+.formulir input,
+.formulir select,
+.formulir textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    background: #161622;
+    color: white;
+}
+
+form button {
+    background: #d4af37;
+    color: #0a0a10;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #0a0a10;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f5f5f5;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    background: #111118;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #d4af37;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* ================= HEADER ================= */
+.contact-header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.contact-header h1 {
+    font-size: 42px;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    font-style: italic;
+    color: #aaa;
+}
+
+/* ================= KOTAK UTAMA ================= */
+.contact-section {
+    max-width: 900px;
+    margin: 40px auto 80px;
+    padding: 50px;
+    background: #111118;
+    border: 2px solid #d4af37;
+    border-radius: 20px;
+}
+
+/* ================= DESKRIPSI ================= */
+.contact-description {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+/* ================= FORM ================= */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    background: #161622;
+    color: white;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #d4af37;
+    color: #0a0a10;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    opacity: 0.85;
+}
+
+/* ================= INFO KONTAK ================= */
+.contact-info {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #d4af37;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* ================= HEADER EVENT ================= */
+.event-header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.event-header h1 {
+    font-size: 42px;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    font-style: italic;
+    color: #aaa;
+}
+
+/* ================= SECTION EVENT ================= */
+.event-section {
+    max-width: 1000px;
+    margin: 40px auto 80px;
+    padding: 40px;
+    background: #111118;
+    border: 2px solid #d4af37;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ================= CARD EVENT ================= */
+.event-card {
+    background: #161622;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #d4af37;
+    transition: 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.event-card h2 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.event-date {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.event-card p {
+    line-height: 1.7;
+}
