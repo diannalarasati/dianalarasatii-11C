@@ -1,164 +1,38 @@
-/* ================= RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ======================
+   STYLE UMUM
+====================== */
 
-/* ================= BODY ================= */
 body {
-    background: #0a0a10; /* hitam */
+    background-color: #0f0f14;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #f5f5f5;
-    padding: 40px 20px;
-}
-
-/* ================= KOTAK BESAR (SEMUA BAGIAN) ================= */
-body > h1,
-body > h2,
-body > p,
-body > ul,
-.daftar-produk,
-.artikel,
-.formulir {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 50px;
-    background: #111118; /* hitam gelap */
-    border: 2px solid #d4af37; /* gold */
-    border-radius: 20px;
-}
-
-/* ================= JUDUL ================= */
-h1, h2, h3 {
-    color: #d4af37;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* ================= PARAGRAF ================= */
-p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-/* ================= PRODUK ================= */
-.daftar-produk {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 30px;
-}
-
-.produk {
-    background: #161622;
-    border: 1px solid #d4af37;
-    border-radius: 15px;
-    padding: 25px;
-    text-align: center;
-}
-
-.produk img {
-    width: 140px;
-    margin-bottom: 15px;
-}
-
-.produk h2,
-.produk h3 {
-    color: #d4af37;
-}
-
-.harga {
-    color: #d4af37;
-    font-weight: bold;
-}
-
-.deskripsi {
-    font-size: 14px;
-    color: #ddd;
-}
-
-/* ================= ARTIKEL ================= */
-.artikel {
-    line-height: 1.9;
-}
-
-.artikel .penulis {
-    color: #aaa;
-}
-
-.artikel .sampul {
-    width: 180px;
-    float: right;
-    margin: 0 0 20px 20px;
-    border: 1px solid #d4af37;
-}
-
-.artikel blockquote {
-    border-left: 4px solid #d4af37;
-    padding-left: 20px;
-    margin: 20px 0;
-    background: #161622;
-    color: #ddd;
-}
-
-/* ================= BUTTON ================= */
-.btn-kembali {
-    display: block;
-    width: fit-content;
-    margin: 40px auto 0;
-    padding: 12px 20px;
-    border: 2px solid #d4af37;
-    color: #d4af37;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.btn-kembali:hover {
-    background: #d4af37;
-    color: #0a0a10;
-}
-
-/* ================= FORM ================= */
-.formulir input,
-.formulir select,
-.formulir textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #d4af37;
-    border-radius: 6px;
-    background: #161622;
-    color: white;
-}
-
-form button {
-    background: #d4af37;
-    color: #0a0a10;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-}
-
-/* ================= RESET ================= */
-* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
+    /* efek transisi halaman */
+    animation: fadeIn 0.8s ease;
 }
 
-/* ================= BODY ================= */
-body {
-    background: #0a0a10;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #f5f5f5;
+/* animasi halaman muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* ================= NAVBAR ================= */
+/* ======================
+   NAVBAR
+====================== */
+
 nav {
-    background: #111118;
-    padding: 20px;
     text-align: center;
+    background-color: #111;
+    padding: 18px;
     border-bottom: 2px solid #d4af37;
 }
 
@@ -167,146 +41,552 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
+/* hover glow navbar */
 nav a:hover {
     color: white;
+    text-shadow: 0 0 8px #d4af37;
 }
 
-/* ================= HEADER ================= */
-.contact-header {
+/* ======================
+   JUDUL
+====================== */
+
+h1 {
     text-align: center;
-    padding: 60px 20px 30px;
-}
-
-.contact-header h1 {
+    margin-top: 60px;
     font-size: 42px;
     color: #d4af37;
-    margin-bottom: 10px;
+
+    text-shadow: 0 0 10px rgba(212,175,55,0.4);
 }
 
-.brand-name {
-    font-style: italic;
-    color: #aaa;
-}
-
-/* ================= KOTAK UTAMA ================= */
-.contact-section {
-    max-width: 900px;
-    margin: 40px auto 80px;
-    padding: 50px;
-    background: #111118;
-    border: 2px solid #d4af37;
-    border-radius: 20px;
-}
-
-/* ================= DESKRIPSI ================= */
-.contact-description {
+p strong {
+    display: block;
     text-align: center;
-    margin-bottom: 40px;
-    line-height: 1.8;
-}
-
-/* ================= FORM ================= */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #d4af37;
-    border-radius: 8px;
-    background: #161622;
-    color: white;
-    font-size: 14px;
-}
-
-.contact-form textarea {
-    min-height: 120px;
-    resize: none;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    background: #d4af37;
-    color: #0a0a10;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    opacity: 0.85;
-}
-
-/* ================= INFO KONTAK ================= */
-.contact-info {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid #d4af37;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
-}
-
-/* ================= HEADER EVENT ================= */
-.event-header {
-    text-align: center;
-    padding: 60px 20px 30px;
-}
-
-.event-header h1 {
-    font-size: 42px;
-    color: #d4af37;
-    margin-bottom: 10px;
-}
-
-.brand-name {
     font-style: italic;
-    color: #aaa;
-}
-
-/* ================= SECTION EVENT ================= */
-.event-section {
-    max-width: 1000px;
-    margin: 40px auto 80px;
-    padding: 40px;
-    background: #111118;
-    border: 2px solid #d4af37;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* ================= CARD EVENT ================= */
-.event-card {
-    background: #161622;
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid #d4af37;
-    transition: 0.3s ease;
-}
-
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-}
-
-.event-card h2 {
-    color: #d4af37;
-    margin-bottom: 10px;
-}
-
-.event-date {
-    font-size: 14px;
+    margin-top: 5px;
     color: #bbb;
-    margin-bottom: 15px;
-    font-style: italic;
 }
 
-.event-card p {
+/* ======================
+   DESKRIPSI
+====================== */
+
+body > p:nth-of-type(2) {
+    max-width: 750px;
+    margin: 25px auto;
+    text-align: center;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+/* ======================
+   SUB JUDUL
+====================== */
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #d4af37;
+}
+
+/* ======================
+   LIST KATEGORI
+====================== */
+
+ul {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px 80px;
+    list-style: none;
+}
+
+ul li {
+    background-color: #111;
+    border: 1px solid #d4af37;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
     line-height: 1.7;
+
+    transition: all 0.35s ease;
+}
+
+ul li strong {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+/* ======================
+   HOVER GLOW
+====================== */
+
+ul li:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 
+        0 0 10px rgba(212,175,55,0.5),
+        0 0 25px rgba(212,175,55,0.2);
+}
+
+/* glow lembut halaman */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 70%);
+    pointer-events:none;
+}
+
+/* JUDUL HALAMAN */
+h1{
+text-align:center;
+color:#d4af37;
+margin-top:30px;
+margin-bottom:30px;
+}
+
+/* CONTAINER PRODUK */
+.daftar-produk{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+padding:20px;
+}
+
+/* KOTAK PRODUK */
+.produk{
+background:#111;
+width:320px;
+padding:20px;
+border-radius:10px;
+border:1px solid #d4af37;
+text-align:center;
+box-shadow:0 0 10px rgba(212,175,55,0.2);
+transition:0.3s;
+}
+
+/* HOVER */
+.produk:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(212,175,55,0.4);
+}
+
+/* GAMBAR BUKU */
+.produk img{
+width:150px;
+height:auto;
+margin-bottom:15px;
+border-radius:5px;
+}
+
+/* JUDUL BUKU */
+.produk h2{
+color:#d4af37;
+font-size:20px;
+margin-bottom:10px;
+}
+
+/* HARGA */
+.harga{
+color:#fff;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+/* DESKRIPSI */
+.deskripsi{
+font-size:14px;
+line-height:1.6;
+color:#ddd;
+text-align:justify;
+}
+
+/* LINK KEMBALI KE BERANDA */
+section p{
+text-align:center;
+width:100%;
+margin-top:30px;
+}
+
+section p a{
+display:inline-block;
+padding:10px 22px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
+}
+
+section p a:hover{
+background:#f5d97a;
+box-shadow:0 0 10px #d4af37;
+}
+
+/* ===================== */
+/* BEDAH BUKU */
+/* ===================== */
+
+.daftar-produk{
+display:flex;
+justify-content:center;
+margin:40px auto;
+padding:20px;
+}
+
+.artikel{
+background:#111;
+border:1px solid #d4af37;
+border-radius:10px;
+max-width:900px;
+padding:30px;
+color:#eee;
+line-height:1.7;
+box-shadow:0 0 10px rgba(212,175,55,0.2);
+transition:0.3s;
+}
+
+.artikel:hover{
+box-shadow:0 0 20px rgba(212,175,55,0.5);
+}
+
+/* judul */
+.artikel h2{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+/* penulis */
+.penulis{
+font-style:italic;
+color:#c9b26b;
+margin-bottom:20px;
+}
+
+/* gambar sampul */
+.sampul{
+display:block;
+margin:20px auto;
+width:200px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(212,175,55,0.3);
+}
+
+/* isi paragraf */
+.artikel p{
+margin-bottom:15px;
+text-align:justify;
+}
+
+/* quote */
+blockquote{
+border-left:4px solid #d4af37;
+padding-left:15px;
+margin:20px 0;
+font-style:italic;
+color:#f1e2a6;
+}
+
+/* tombol kembali */
+.btn-kembali{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn-kembali:hover{
+background:#f5d97a;
+box-shadow:0 0 10px #d4af37;
+}
+
+/* footer */
+footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+color:#aaa;
+border-top:1px solid #333;
+}
+
+/* ===================== */
+/* TESTIMONI FORM */
+/* ===================== */
+
+.formulir{
+max-width:700px;
+margin:50px auto;
+background:#111;
+padding:30px;
+border-radius:10px;
+border:1px solid #d4af37;
+box-shadow:0 0 10px rgba(212,175,55,0.2);
+}
+
+.formulir h2{
+text-align:center;
+color:#d4af37;
+margin-bottom:25px;
+}
+
+/* label */
+.formulir label{
+display:block;
+margin-top:15px;
+margin-bottom:5px;
+color:#f0e6c0;
+font-weight:500;
+}
+
+/* input dan textarea */
+.formulir input,
+.formulir textarea{
+width:100%;
+padding:10px;
+border-radius:6px;
+border:1px solid #444;
+background:#1a1a1a;
+color:#eee;
+font-size:14px;
+transition:0.3s;
+}
+
+/* efek focus */
+.formulir input:focus,
+.formulir textarea:focus{
+outline:none;
+border:1px solid #d4af37;
+box-shadow:0 0 5px rgba(212,175,55,0.5);
+}
+
+/* tombol */
+.formulir button{
+margin-top:20px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+background:#d4af37;
+color:#000;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+/* hover tombol */
+.formulir button:hover{
+background:#f5d97a;
+box-shadow:0 0 10px #d4af37;
+}
+
+/* judul halaman */
+h1{
+text-align:center;
+margin-top:30px;
+color:#d4af37;
+}
+
+/* footer */
+footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+color:#aaa;
+border-top:1px solid #333;
+}
+
+/* ======================
+   CONTACT PAGE
+====================== */
+
+.contact-header{
+text-align:center;
+margin-top:40px;
+}
+
+.contact-header h1{
+font-size:36px;
+color:#d4af37;
+margin-bottom:5px;
+}
+
+.brand-name{
+color:#aaa;
+font-style:italic;
+letter-spacing:1px;
+}
+
+/* container */
+
+.contact-section{
+max-width:700px;
+margin:40px auto;
+padding:35px;
+background:#111;
+border-radius:10px;
+border:1px solid #d4af37;
+box-shadow:0 0 15px rgba(212,175,55,0.2);
+}
+
+/* deskripsi */
+
+.contact-description{
+text-align:center;
+color:#ccc;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+/* form */
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-bottom:30px;
+}
+
+/* input */
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+background:#1a1a1a;
+border:1px solid #333;
+border-radius:6px;
+color:#eee;
+font-size:14px;
+transition:0.3s;
+}
+
+/* focus glow */
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+outline:none;
+border:1px solid #d4af37;
+box-shadow:0 0 6px rgba(212,175,55,0.4);
+}
+
+/* textarea */
+
+.contact-form textarea{
+resize:none;
+height:120px;
+}
+
+/* button */
+
+.contact-form button{
+margin-top:10px;
+padding:12px;
+background:#d4af37;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+/* hover button */
+
+.contact-form button:hover{
+background:#f0d77a;
+box-shadow:0 0 10px #d4af37;
+}
+
+/* info kontak */
+
+.contact-info{
+margin-top:20px;
+padding-top:20px;
+border-top:1px solid #333;
+color:#ddd;
+line-height:1.7;
+}
+
+.contact-info strong{
+color:#d4af37;
+}
+
+/* ======================
+   EVENT PAGE
+====================== */
+
+.event-header{
+text-align:center;
+margin-top:40px;
+}
+
+.event-header h1{
+font-size:36px;
+color:#d4af37;
+margin-bottom:5px;
+}
+
+.brand-name{
+color:#aaa;
+font-style:italic;
+letter-spacing:1px;
+}
+
+/* container */
+
+.event-section{
+max-width:800px;
+margin:40px auto;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+/* card event */
+
+.event-card{
+background:#111;
+padding:30px;
+border-radius:10px;
+border:1px solid #d4af37;
+box-shadow:0 0 12px rgba(212,175,55,0.15);
+transition:0.3s;
+}
+
+/* hover glow */
+
+.event-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 18px rgba(212,175,55,0.35);
+}
+
+/* judul */
+
+.event-card h2{
+color:#d4af37;
+margin-bottom:8px;
+}
+
+/* tanggal */
+
+.event-date{
+color:#bbb;
+font-size:14px;
+margin-bottom:10px;
+}
+
+/* deskripsi */
+
+.event-card p{
+color:#ddd;
+line-height:1.6;
 }
